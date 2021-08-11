@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Nunito:400,700');
+
+$background: #F0F2F5;
+$link: #800080;
+$success: #42B72A;
+$green: #27d7a1;
+
+
+$family-sans-serif: "Nunito", sans-serif;
+// Custom global styles
+html {
+    background: $background;
+}
+
+html, body {
+    height: 100%;
+    background: $background;
+}
+
+.title {
+    font-family: 'Lato';
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.centered-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    
+}

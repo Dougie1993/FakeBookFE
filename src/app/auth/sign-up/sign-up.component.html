@@ -1,0 +1,66 @@
+<div class="centered-content">
+    <div class="signup-box">
+        <h1 class="title text-primary">Welcome to Fakebuk</h1>
+        <form role="form" (ngSubmit)="onSignUp()" #f="ngForm">
+            <div class="form-content">
+                <div class="form-group">
+                    <input type="text"
+                    class="form-control"
+                    name="fname"
+                    id="fname"
+                    placeholder="First Name"
+                    required
+                    ngModel>
+                </div>
+                <div class="form-group">
+                    <input type="text"
+                    class="form-control"
+                    name="mname"
+                    id="mname"
+                    placeholder="Middle Name"
+                    ngModel>
+                </div>
+                <div class="form-group">
+                    <input type="text"
+                    class="form-control"
+                    name="lname"
+                    id="lname"
+                    placeholder="Last Name"
+                    required
+                    ngModel>
+                </div>
+                <div class="form-group">
+                    <input type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                    ngModel>
+                </div>
+                <div class="form-group">
+                    <input type="password"
+                    class="form-control"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                    ngModel>
+                </div>
+                <div class="form-group">
+                    <input type="password"
+                    class="form-control"
+                    name="confPassword"
+                    id="confPassword"
+                    placeholder="Confirm Password"
+                    required
+                    ngModel>
+                </div>
+            </div>
+            <div class="float-right">
+                <button class="btn btn-primary btn-block float-right" type="submit">Sign Up</button>
+            </div>
+            <p>Have an account? <a routerLink="/login">Sign In</a></p>
+        </form>
+    </div>
+</div>
