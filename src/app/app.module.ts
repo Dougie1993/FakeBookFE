@@ -1,31 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SignUpComponent } from './auth/sign-up/sign-up.component';
-import { LoginComponent } from './auth/login/login.component';
+import { ApiInterceptor } from './core/guards&&interceptors/api.interceptor';
+import { AuthGuard } from './core/guards&&interceptors/auth.guard'
+
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SignUpComponent,
-    LoginComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    CommonModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true}, AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

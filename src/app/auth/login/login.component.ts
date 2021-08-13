@@ -37,7 +37,6 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.valid) {
       console.log(this.user);
       this.authService.login(this.user).subscribe((res) => {
-        console.log(res);
       });
     } else {
       console.log('Form is not valid')

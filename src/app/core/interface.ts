@@ -20,3 +20,11 @@ export interface RegisterUser {
     password: string;
     created?: Date;
 }
+
+export interface Profile {
+    firstname: string;
+    middlename?: string;
+    lastname: string;
+    _id: string;
+
+}

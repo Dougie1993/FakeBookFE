@@ -53,7 +53,6 @@ export class SignUpComponent implements OnInit {
 
     if (this.registerForm.valid) {
       this.authService.signUp(this.user).subscribe((res)=> {
-        console.log(res);
       });
     } else {
       console.log('Form is not valid')
